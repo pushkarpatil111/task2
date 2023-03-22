@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/572a89a11f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/intro.html">About</li>
+                    <li><a href="/bolg.html">Blog</a></li>
+                    <li><a href="/service.html">Service</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    <!-- <div class="main"> -->
+        <div id="about">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="new.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>“I am a dynamic figure. In my mind, I am often climbing mountains and crushing huge icebergs under my pirate ship!
+                         I have been known to remodel the electricity supply system of the entire city during lunch breaks.
+
+                        In my free time, I compose poetry or paint, which shows that I am an artistic person who can also manage free time
+                         efficiently!
+                        
+                        I agree that I love to work hard, but I am also a social butterfly and can party all day and night long for two days in a row! 
+                        I am a great cook too and can stir up my favorite thirty-minute pasta dish in under fifteen minutes.
+                        
+                        I am an expert roller skater having performed at several Skate Shows and won a handful of them.
+                         I am also an automobile maniac and a gadget freak. Honestly, I love this question and can talk for hours about myself but I feel I should stop now. :)” </p>
+
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                         </div>
+
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/ App interfaces</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>Python</span><br>Building self-python project</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>2022-2023 -Current</span><br> Internship at Oasis Infobyte</li>
+                               
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="Education">
+                            <ul>
+                                
+                                <li><span>2021-2024</span><br>Pursuing BSC Computer Science from Panchavati College Of Management & Computer Science</li>
+                                <li><span>2022</span><br>HSC from L.V.H College</li>
+                            </ul>
+                         </div>
+                </div>
+            </div>
+        </div>
+<!-- </div>   -->
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+</html>
